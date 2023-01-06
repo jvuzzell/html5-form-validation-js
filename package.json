@@ -1,5 +1,5 @@
 {
-    "name": "html5-validation-js",
+    "name": "html5-form-validation-js",
     "version": "0.9.0",
     "description": "Leverages HTML5 form validation API to style the output of error messages",
     "main": "html5-validation.js",
