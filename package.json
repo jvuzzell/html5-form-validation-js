@@ -1,7 +1,7 @@
 {
     "name": "html5-validation-js",
     "version": "0.9.0",
-    "description": "Plugin for creating and managing collapsible content areas like F.A.Q's and dropdowns",
+    "description": "Leverages HTML5 form validation API to style the output of error messages",
     "main": "html5-validation.js",
     "scripts": {
         "test": "jest",
