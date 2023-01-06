@@ -1,0 +1,36 @@
+.jar {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 0;
+    z-index: -1;                
+}
+
+input:invalid {
+    border: 2px dashed red;
+}
+
+/* input:valid {
+    border: 2px solid black;
+} */
+
+.form-error-container {
+    display: none;
+    margin-bottom: 20px; 
+    background-color: #BF2600;
+    color: #fff; 
+}
+
+.form-error-container li {
+    margin-bottom: 10px;
+}
+
+.form-error-container :last-child {
+    padding-bottom: 20px;
+}
+
+.display-error-message {
+    display: block; 
+}

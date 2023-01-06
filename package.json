@@ -1,0 +1,34 @@
+{
+    "name": "html5-validation-js",
+    "version": "0.0.1",
+    "description": "Plugin for creating and managing collapsible content areas like F.A.Q's and dropdowns",
+    "main": "html5-validation.js",
+    "scripts": {
+        "test": "jest",
+        "test-watch": "jest --watch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jvuzzell/html5-validation-js.git"
+    },
+    "keywords": [
+        "html5", 
+        "input",
+        "validation"
+    ],
+    "author": "Joshua Uzzell <josh.uzzell@gmail.com> (https://uzzell.cc)",
+    "license": "SEE LICENSE IN license.txt",
+    "bugs": {
+        "url": "https://github.com/jvuzzell/html5-validation-js/issues"
+    },
+    "homepage": "https://github.com/jvuzzell/html5-validation-js#readme",
+    "devDependencies": {
+        "@babel/plugin-transform-modules-commonjs": "^7.20.7",
+        "@testing-library/dom": "^8.17.1",
+        "@testing-library/jest-dom": "^5.16.5",
+        "@testing-library/user-event": "^14.4.3",
+        "jest": "^28.1.3",
+        "jest-cli": "^29.3.1",
+        "jest-environment-jsdom": "^29.0.1"
+    }
+}
