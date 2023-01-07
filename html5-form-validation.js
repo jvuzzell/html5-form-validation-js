@@ -14,11 +14,6 @@ export let FormValidation = ( function( window, document ) {
             return; // exit plugin
         }
 
-        if( validFormCallback === null ) {
-            console.warn( 'HTML5 Validation Plugin, name of callback not supplied. Form ID: ' + formId );
-            return; // exit plugin
-        }
-
         formElement.noValidate = true; 
         formElement.addEventListener( 'submit', function( submitEvent ) {
             submitEvent.preventDefault();
@@ -56,6 +51,11 @@ export let FormValidation = ( function( window, document ) {
 
         // Prevent form submissions by bots 
         if ( checkHoneypot( submitEvent.target ) ) { return false };
+
+        if( callbackName === null ) {
+            console.warn( 'HTML5 Form Validation, name of callback not supplied.' );
+            return; // exit plugin
+        }
 
         // Check field validity
         if ( !submitEvent.target.checkValidity() ) {
