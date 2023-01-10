@@ -24,7 +24,7 @@ https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation#validating_
 
 ---
 
-## Installation {#installation} 
+## Installation 
 
 <br>
 
@@ -40,7 +40,7 @@ OR you can use the **html5-form-validation.js** directly in your project
 
 <br>
 
-## Basic Usage {#basic-usage}
+## Basic Usage
 See [*'/demo/basic-usage.html'*](https://github.com/jvuzzell/html5-form-validation-js/tree/main/demo) in repo for complete example
 
 <br>
@@ -103,7 +103,7 @@ See [*'/demo/basic-usage.html'*](https://github.com/jvuzzell/html5-form-validati
 
 <br>
 
-## Grouping and Displaying Error Messages Together {#grouping-and-displaying-error-message-together}
+## Grouping and Displaying Error Messages Together
 See [*'/demo/grouped-error-messages.html'*](https://github.com/jvuzzell/html5-form-validation-js/tree/main/demo) in repo for complete example
 
 <br>
@@ -149,7 +149,7 @@ If a UI specifies multiple forms, each form can use its own grouped error messag
 
 <br>
 
-## Custom Error Messages {#custom-error-messages}
+## Custom Error Messages
 See [*'/demo/grouped-error-messages.html'*](https://github.com/jvuzzell/html5-form-validation-js/tree/main/demo) in this repo for complete example
 
 <br>
@@ -165,8 +165,7 @@ To display custom error messages, developers can add the **data-error-message** 
 
 <br>
 
-## Handling Form Submission on Success {#handling-form-submission-on-success}
-<br>
+## Handling Form Submission on Success
 When the submit button is clicked on a form where the HTML5-Form-Validation-JS plugin will handle validation, **preventdefault()**, **stopImmediatePropagation()**, and **stopPropagation()** methods are called when the **submit** event is triggered on the form. As a result, the default form action will not be called; the developer has to handle form submission. 
 
 Developers can handle form submission by registering a callback (form submission handler) via the **.registerCallback( name, eventHandler )** method. It accepts a string as its first argument and a function as its second. When the eventHandler is called, it is passed the form submit event. The *eventHandler* can be a named, anonymous, or arrow function. 
@@ -201,7 +200,7 @@ FormValidation.registerCallback(
 
 <br>
 
-## Prevent Plugin from Handling a Form {#prevent-plugin-from-handling-a-form}
+## Prevent Plugin from Handling a Form
 
 <br>
 The HTML5-Form-Validation-JS plugin will not discriminate between forms it will try to validate. Once **initFormValidation()** runs, it will try to register every form on the page. 
@@ -226,7 +225,7 @@ https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation#validating_
 
 <Br>
 
-## (Optional) Honeypot Pattern {#optional-honeypot-pattern}
+## (Optional) Honeypot Pattern
 See [*/demo/basic-usage.html*](https://github.com/jvuzzell/html5-form-validation-js/tree/main/demo) in this repo
 
 <br>
@@ -263,7 +262,7 @@ This technique is easy to implement and easy to counter. Recaptcha is more effec
 
 ---
 
-## Public Methods {#public-methods}
+## Public Methods
 <br>
 
 | Method | Description |
@@ -276,7 +275,7 @@ This technique is easy to implement and easy to counter. Recaptcha is more effec
 
 ---
 
-## Form Attributes {#form-attributes}
+## Form Attributes
 
 | HTML Element | Attribute | Description |
 |--------------|-----------|-------------|
