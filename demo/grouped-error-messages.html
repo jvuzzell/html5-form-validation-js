@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Form Validation Test</title>
+    <link rel="stylesheet" href="/html5-form-validation-js/form-styles.css">
+</head>
+<body>
+    <h2>Form Validation Plugin - Grouped Messages</h2>
+    <p>Try it! Click 'submit' before interacting with inputs to display errors for required fields.</p>
+    <hr>
+    <div id="grouped-error-messages">Grouped Error Messages Here</div>
+    <hr>
+    <form id="form-validation-plugin-form" data-form-callback="handleFormSubmission" data-error-output-id="grouped-error-messages">
+        <div style="margin-bottom:20px;">
+            <label for="first-name">Input field that only accepts custom <strong>pattern [a-z]{1,15}</strong>:</label>
+            <input id="first-name" name="first-name" pattern="[a-z]{1,15}" placeholder="Lowercase only" data-error-message="Please only use 15 lowercase letters" required><br>
+            <label for="email">Input field for <strong>email</strong>:</label>
+            <input id="email" type="email" name="email_address" placeholder="email@gmail.com" required><br>
+            <label for="number">Input field for <strong>number</strong> field:</label>
+            <input id="number" type="number" name="text" value=1000 required><br>
+            <label for="url">Input field for <strong>URL</strong>:</label>
+            <input id="url" type="url" name="url"   pattern="https?://.+" placeholder="https://your-website.com" required><br>
+        </div>
+        <hr>
+        <div style="margin-bottom:20px;">
+            <label for="summary">Multi-line text input field (textarea):</label><br>
+            <textarea id="summary" name="summary" rows="2" cols="20" placeholder="Please provide a brief summary" required></textarea>
+        </div>
+        <hr>
+        <div style="margin-bottom:20px;">
+            The following two radio buttons are inside a <code>fieldset</code> element with a <code>legend</code>:
+        </div>
+        <fieldset>
+            <legend>Legend</legend>
+                <label for="radioButton1">Radio button 1</label>
+                <input id="radioButton1" type="radio" name="radio" value="1"><br>
+                <label for="radioButton2">Radio button 2</label>
+                <input id="radioButton2" type="radio" name="radio" value="2" required>
+        </fieldset>
+        <fieldset>
+            <legend>Check those that apply</legend>
+            <div>
+                <label for="Checkbox1">Checkbox 1</label>
+                <input id="Checkbox1" type="checkbox" name="checkbox"><br>
+                <label for="Checkbox2">Checkbox 2</label>
+                <input id="Checkbox2" type="checkbox" name="checkbox2" required>
+            </div>
+        </fieldset>
+        <hr>
+        <div style="margin-bottom:20px;">
+            <label for="">A <code>select</code> element with <code>size="1"</code> (dropdown box):</label>
+            <select id="" name="Category" required>
+                <option selected disabled>Category
+                <option value="1">General Info
+                <option value="2">Booking
+                <option value="3">Auditions
+            </select>
+        </div>
+        <hr>
+        <div style="margin-bottom:20px;">
+            <label for="f99">Submit button:</label><br>
+            <input id="f99" type="submit" name="submit" value="Submit">
+        </div>
+        <hr>
+        <!-- Honey Pot -->
+        <div class="jar">
+            <p>This is a honeypot, a basic pattern used to protect forms from bots and spam. <br>Warning: This is not as effective as Recaptcha!</p>
+            <p>If value of the input is not empty then the form will not be submitted.</p>
+            <!-- Allow form submission on key down for 'enter' key -->
+            <input type="text" placeholder="Try it!"/>
+        </div>
+
+    </form>
+
+    <script type="module">
+        import { FormValidation, initFormValidation } from '/html5-form-validation-js/html5-form-validation.js';
+        initFormValidation();
+
+        FormValidation.registerCallback( 'handleFormSubmission', event => alert(  'Form ID - ' + event.target.id + ' submitted!' ) );  
+    </script>
+</body>
+</html>
