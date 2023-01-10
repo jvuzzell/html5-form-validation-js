@@ -139,7 +139,7 @@ export let FormValidation = ( function( window, document ) {
 
     function removeMessage( form ) {
 
-        let validationMessages = form.querySelectorAll( '.' + validationMsgClass );
+        let validationMessages = document.querySelectorAll( '.' + validationMsgClass );
         for( let i = 0; i < validationMessages.length; i++ ) {
             validationMessages[ i ].remove();
         }
