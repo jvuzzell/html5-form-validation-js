@@ -1,31 +1,30 @@
 # HTML5 Form Validation JS
 
-Leverages HTML5 form validation API to style the output of error messages. This is a Vanilla JS implementation that uses the HTML Client-side Form Validation API - https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation#validating_forms_using_javascript
+Leverages HTML5 form validation API to style the output of error messages. This is a Vanilla JS implementation that uses the HTML Client-side Form Validation API - 
+https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation#validating_forms_using_javascript
 
 <br>
 
 **Table of contents** 
-- Installation
+- [Installation](#installation)
 - Examples 
-    - Basic Usage 
-    - Grouping and Displaying Errors Together
-    - Custom Error Messages
-    - Handling Form Submission on Success
-    - Prevent Plugin from Handling a Form 
-    - (Optional) HoneyPot Pattern
-- Public Methods 
+    - [Basic Usage](#basic-usage) 
+    - [Grouping and Displaying Errors Together](#grouping-and-displaying-error-messages-together)
+    - [Custom Error Messages](#custom-error-messages)
+    - [Handling Form Submission on Success](#handling-form-submission-on-success)
+    - [Prevent Plugin from Handling a Form](#prevent-plugin-from-handling-a-form)
+    - [(Optional) HoneyPot Pattern](#optional-honeypot-pattern)
+- [Public Methods](#public-methods)
     - FormValidation - Class
         - .registerForm()
         - .registerCallback()
-- Usage 
-    - Styles (CSS)
-    - Form Attributes 
+- [Form Attributes](#form-attributes)
 
 <br>
 
 ---
 
-## Installation ## 
+## Installation {#installation} 
 
 <br>
 
@@ -41,8 +40,8 @@ OR you can use the **html5-form-validation.js** directly in your project
 
 <br>
 
-## Basic Usage ## 
-See *'/demo/basic-usage.html'* in repo for complete example
+## Basic Usage {#basic-usage}
+See [*'/demo/basic-usage.html'*](https://github.com/jvuzzell/html5-form-validation-js/tree/main/demo) in repo for complete example
 
 <br>
 
@@ -104,8 +103,8 @@ See *'/demo/basic-usage.html'* in repo for complete example
 
 <br>
 
-## Grouping and Displaying Error Messages Together ##
-See *'/demo/grouped-error-messages.html'* in repo for complete example
+## Grouping and Displaying Error Messages Together {#grouping-and-displaying-error-message-together}
+See [*'/demo/grouped-error-messages.html'*](https://github.com/jvuzzell/html5-form-validation-js/tree/main/demo) in repo for complete example
 
 <br>
 By default the HTML5-Form-Validation-JS plugin will append a **div** with the class **.validation-message** after the input where the error occurred. Additionally, the plugin will add the **.input-error** class to the input 
@@ -150,8 +149,8 @@ If a UI specifies multiple forms, each form can use its own grouped error messag
 
 <br>
 
-## Custom Error Messages ##
-See *'/demo/grouped-error-messages.html'* in this repo for complete example
+## Custom Error Messages {#custom-error-messages}
+See [*'/demo/grouped-error-messages.html'*](https://github.com/jvuzzell/html5-form-validation-js/tree/main/demo) in this repo for complete example
 
 <br>
 By default the HTML5-Form-Validation-JS plugin uses the default error message described here.https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation#built-in_form_validation_examples. 
@@ -166,7 +165,7 @@ To display custom error messages, developers can add the **data-error-message** 
 
 <br>
 
-## Handling Form Submission on Success ##
+## Handling Form Submission on Success {#handling-form-submission-on-success}
 <br>
 When the submit button is clicked on a form where the HTML5-Form-Validation-JS plugin will handle validation, **preventdefault()**, **stopImmediatePropagation()**, and **stopPropagation()** methods are called when the **submit** event is triggered on the form. As a result, the default form action will not be called; the developer has to handle form submission. 
 
@@ -202,14 +201,17 @@ FormValidation.registerCallback(
 
 <br>
 
-## Prevent Plugin from Handling a Form ##
+## Prevent Plugin from Handling a Form {#prevent-plugin-from-handling-a-form}
 
 <br>
 The HTML5-Form-Validation-JS plugin will not discriminate between forms it will try to validate. Once **initFormValidation()** runs, it will try to register every form on the page. 
 
 To prevent the default form handling on a single form, add the **novalidate** attribute to the form tag.
 
-**Note:** If novalidate is detected, the developer will have to handle both the form submission and validation processes. The browser's default implementation of the HTML Client-side Form Validation API will be deactivated. https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation#validating_forms_using_javascript
+**Note:** If novalidate is detected, the developer will have to handle both the form submission and validation processes. The browser's default implementation of the HTML Client-side Form Validation API will be deactivated. 
+<br>
+https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation#validating_forms_using_javascript
+<br>
 
 **HTML**
 
@@ -224,8 +226,8 @@ To prevent the default form handling on a single form, add the **novalidate** at
 
 <Br>
 
-## (Optional) Honeypot Pattern 
-See */demo/basic-usage.html* in this repo
+## (Optional) Honeypot Pattern {#optional-honeypot-pattern}
+See [*/demo/basic-usage.html*](https://github.com/jvuzzell/html5-form-validation-js/tree/main/demo) in this repo
 
 <br>
 
@@ -261,7 +263,7 @@ This technique is easy to implement and easy to counter. Recaptcha is more effec
 
 ---
 
-## Public Methods ## 
+## Public Methods {#public-methods}
 <br>
 
 | Method | Description |
@@ -274,7 +276,7 @@ This technique is easy to implement and easy to counter. Recaptcha is more effec
 
 ---
 
-## Form Attributes ## 
+## Form Attributes {#form-attributes}
 
 | HTML Element | Attribute | Description |
 |--------------|-----------|-------------|
